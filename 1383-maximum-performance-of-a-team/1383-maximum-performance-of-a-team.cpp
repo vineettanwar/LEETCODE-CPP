@@ -1,8 +1,10 @@
 class Solution {
 public:
     int maxPerformance(int n, vector<int>& speed, vector<int>& efficiency, int k) {
+        //OBJECT TO BIND ENGINEER SPEED AND EFFICIENCY.
         vector<pair<int,int>> v;
         
+        //PRIORITY QUEUE FOR SPEED
         priority_queue<int,vector<int>,greater<int>> pq;
         
         //bind speed and efficiency of engineer together
