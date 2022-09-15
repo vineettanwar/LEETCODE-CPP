@@ -38,11 +38,6 @@ public:
                 
             }
         }
-        // for(auto x:mp){
-        //     if(x.second>0){
-        //         return false;
-        //     }
-        // }
         return count==arr.size()/2;        
     }   
 };
