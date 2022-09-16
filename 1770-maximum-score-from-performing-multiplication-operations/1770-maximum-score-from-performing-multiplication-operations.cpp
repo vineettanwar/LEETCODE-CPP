@@ -43,7 +43,7 @@ class Solution {
 //         NUMS.LENGTH =TOTAL ELEMENTS 
 //         THEREFORE END =(NUMS.LENGTH-I-S-1);
     
-    int help(int i,vector<int>&M,vector<int>&nums,int s,int e){
+    int help(int i,vector<int>&M,vector<int>&nums,int s){
         if(i==M.size()){
             return 0;
         }
@@ -51,9 +51,9 @@ class Solution {
         if(dp[i][s]!=INT_MIN){
             return dp[i][s];
         }
-        // int e=nums.size()-(i-s)-1;
-        int op1=M[i]*nums[s] + help(i+1,M,nums,s+1,e);
-        int op2=M[i]*nums[e] + help(i+1,M,nums,s,e-1);
+        int e=nums.size()-(i-s)-1;
+        int op1=M[i]*nums[s] + help(i+1,M,nums,s+1);
+        int op2=M[i]*nums[e] + help(i+1,M,nums,s);
         return dp[i][s]=max(op1,op2);
     }
     
@@ -74,7 +74,7 @@ public:
         int m=M.size(); 
         dp.assign(m + 1, vector<int> (m+1, INT_MIN));
         // memset(dp,-1,sizeof(dp));
-        return help(0,M,nums,0,nums.size()-1);
+        return help(0,M,nums,0);
         
         
         // greedy fails
