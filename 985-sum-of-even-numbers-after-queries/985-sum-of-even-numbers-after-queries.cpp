@@ -18,7 +18,6 @@ public:
                 evensum+=num;
             }
         }
-        cout<<"initial sum "<<evensum<<endl;
         for(auto q:queries){
             int val=q[0];
             int idx=q[1];
