@@ -16,10 +16,10 @@ public:
                 temp=temp+s[i];
             }
             else{
-                cout<<"TEMP"<<temp;
+                // cout<<"TEMP"<<temp;
                 string nstr=reverse(temp);
                 temp.clear();
-                cout<<nstr<<endl;
+                // cout<<nstr<<endl;
                 ans=s[i]!='\0'? ans+nstr+' ':ans+nstr;
             }
         }
