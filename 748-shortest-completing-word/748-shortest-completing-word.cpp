@@ -8,9 +8,9 @@ public:
             if(isalpha(x))
             mp[tolower(x)]+=1;
         }
-        for(auto x:mp){
-            cout<<x.first<<x.second<<endl;
-        }
+//         for(auto x:mp){
+//             cout<<x.first<<x.second<<endl;
+//         }
         
         // unordered_map<char,int> freq;
         int prev=99;
@@ -32,10 +32,10 @@ public:
                     }
                 }
             }
-            cout<<"NEW WORD"<<endl;
-            for(auto y:freq){
-            cout<<y.first<<y.second<<endl;
-        }
+        //     cout<<"NEW WORD"<<endl;
+        //     for(auto y:freq){
+        //     cout<<y.first<<y.second<<endl;
+        // }
         }
         
        return ans;         
