@@ -13,6 +13,9 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         // ListNode* dummy=new ListNode();
         // dummy->next=head;
+        if(!head){
+            return head;
+        }
         ListNode* f=head;
         ListNode* s=head;
         while(n--){
