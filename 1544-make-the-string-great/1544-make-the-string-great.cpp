@@ -22,9 +22,9 @@ public:
             }
         }
         string ans="";
-        if(st.empty()){
-            return ans;
-        }
+        // if(st.empty()){
+        //     return ans;
+        // }
         while(!st.empty()){
             ans+=st.top();
             st.pop();
