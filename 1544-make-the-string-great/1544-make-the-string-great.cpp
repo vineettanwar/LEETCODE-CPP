@@ -14,7 +14,7 @@ public:
         // }
         stack<char> st;
         for(int i=0;i<s.length();i++){
-            if(!st.empty() && (abs(int(st.top())-int(s[i])))==32){
+            if(!st.empty() && abs(st.top()-s[i])==32){
                 st.pop();
             }
             else{
