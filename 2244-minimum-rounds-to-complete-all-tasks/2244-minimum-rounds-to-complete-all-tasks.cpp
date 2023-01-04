@@ -12,15 +12,15 @@ public:
             // }
         }
         int count=0;
-        for(auto x:dic){
-            if(x.second==1){
+        for(auto [y,x]:dic){
+            if(x==1){
                 return -1;
             }
-            if(x.second%3==0){
-                count+=(x.second/3);
+            if(x%3==0){
+                count+=(x/3);
             }
             else{
-                count+=(x.second/3+1);
+                count+=(x/3+1);
             }
         }
         return count;
